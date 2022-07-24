@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let sum=0;
+   let array=[];
+   let doDai=+prompt("nhap do dai");
+   for(let i=0;i<doDai;i++) {
+       let arr = +prompt("nhap gia tri");
+       array[i] = arr;
+       array.push(arr);
+       }
+
+
+
+       for(let i=0;i<array.length;i++){
+           let check = true;
+       for (let j = 2; j < array[i] / 2; j++) {
+           if (array[i] % j == 0) {
+               check = false;
+               break;
+           }
+       }
+
+          if (check == true) {
+              sum += array[i];
+          }
+      }
+
+  document.write(sum);
+
+
+  // let array=[2,3,4,5,6];
+  // for(i=0;i<array.length;i++){
+  //     document.write(array[i])}
+
+
+  //
+  // let n=+prompt("");
+  // let check=true;
+  // for(let i=2;i<n/2;i++){
+  //     if(n%i==0){
+  //         check=false;
+  //         document.write("k la so nguyen");
+  //         break;
+  //     }
+  // }if (check==true) {
+  //     document.write("la so nguyen " + n);
+  // }
+</script>
+</body>
+</html>
